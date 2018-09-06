@@ -5,7 +5,7 @@ m4  类似于C语言的预处理器,用来处理宏的。
 
 ***
 
-##-lpthread 
+## -lpthread 
 多线程库pthread，但是编译时总是提示
 >“undefined reference to 'pthread_create'”的错误
 
