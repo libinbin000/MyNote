@@ -17,3 +17,43 @@ m4  类似于C语言的预处理器,用来处理宏的。
     rm -rf *.o transmitter  
 
 ***
+## 记录一个makefile
+用于编译libev项目的，一直不知道如何连接动态库.so
+
+<code>
+CC=gcc
+
+TARGET=test
+
+CFLAGS= -Wall
+
+SRCS=main.c\
+
+OBJS=$(SRCS:.c=.o)
+
+INCLUDES=-I./libev\
+
+LIB_PATHS=-L./libev/.libs
+
+LIBS=-lev
+
+>在gcc末尾加入以下代码
+
+SO=-Wl,-rpath=./libev/.libs
+
+$(TARGET):$(OBJS)
+	$(info >>>>>>>>>>>>>>>>>>>>>>>)
+	$(CC) $^ -o $@	$(CFLAGS) $(INCLUDES) $(LIB_PATHS) $(LIBS) $(SO)
+
+%.o : %.c
+	$(info >>>>>>>>>>>>>>>>>>>>>>>%.o)
+	$(CC) -c $< $(CFLAGS) $(INCLUDES) $(LIB_PATHS) $(LIBS)
+
+clean:
+	rm -rf *.out *.o    #清除中间文件及生成文件
+
+.PHONY:clean
+
+</code>
+
+***
