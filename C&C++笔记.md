@@ -20,7 +20,7 @@ m4  类似于C语言的预处理器,用来处理宏的。
 ## 记录一个makefile
 用于编译libev项目的，一直不知道如何连接动态库.so
 
-<code>
+<pre><code>
 CC=gcc
 
 TARGET=test
@@ -54,6 +54,6 @@ clean:
 
 .PHONY:clean
 
-</code>
+</code></pre>
 
 ***
