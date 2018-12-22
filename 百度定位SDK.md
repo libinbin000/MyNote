@@ -59,7 +59,7 @@ dependencies {
 <!-- SD卡读取权限，用户写入离线定位数据-->
 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
 ```
->注意 build.gradle中需要添加 
+>注意 build.gradle中需要添加
 ```
 android{
     sourceSets {

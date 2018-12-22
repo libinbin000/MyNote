@@ -3,3 +3,5 @@
 >cjson 处理json。
 
 >libwebsockets 一款轻量级用来开发服务器和客户端的C库。不仅支持ws，wss还同时支持http与https，可以轻轻松松结合openssl等库来实现ssl加密。
+
+>libcurl是一个开源的客户端url传输库，支持 FTP，FTPS，TFTP，HTTP，HTTPS，GOPHER，TELNET，DICT，FILE和LDAP，支持 Windows，Unix，Linux等平台，简单易用，且库文件占用空间不到200K
